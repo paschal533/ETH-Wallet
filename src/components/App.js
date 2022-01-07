@@ -112,14 +112,14 @@ class App extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    { this.state.transactions.map((tx, key) => {
+                    {this.state.transactions.map((tx, key) => {
                       return (
                         <tr key={key} >
                           <td>{tx.returnValues.to}</td>
                           <td>{window.web3.utils.fromWei(tx.returnValues.value.toString(), 'Ether')}</td>
                         </tr>
                       )
-                    }) }
+                    })}
                   </tbody>
                 </table>
               </div>
